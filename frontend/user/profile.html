@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Your Profile</title>
+    <link rel="stylesheet" href="../assets/css/styles.css" />
+  </head>
+  <body>
+    <nav>
+      <!-- Left Section: Logo + Parajulillb -->
+      <div class="nav-left">
+        <img src="../assets\images\logo.jpg" alt="" class="logo" />
+        <span class="brand-name">Myllb</span>
+      </div>
+
+      <!-- Center Section: Navigation Buttons -->
+      <div class="nav-center">
+        <button onclick="scrollToSection('home')">MyHome</button>
+        <button onclick="scrollToSection('mycourses')">MyCourses</button>
+      </div>
+
+      <!-- Right Section: Theme Switcher + Get Started -->
+      <div class="nav-right">
+        <div class="theme-switcher">
+          <button onclick="setTheme('light')" aria-label="Light Theme">
+            ☀️ 
+          </button>
+          <button onclick="setTheme('dark')" aria-label="Dark Theme">
+            🌙
+          </button>
+          <button onclick="setTheme('sepia')" aria-label="Sepia Theme">
+            ☀️ 
+          </button>
+        </div>
+        
+        <a href="#">
+        <button class="cta">
+          Profile
+        </button> </a>
+      </div>
+
+    </nav>
+    <section class="section" id="courses">
+      <h2 class="section-title">My Courses</h2>
+      <div class="courses-grid">
+        <div class="course-card">
+          <div class="course-img">📚</div>
+          <div class="course-content">
+            <h3 class="course-title">Constitutional Law</h3>
+            <p class="course-desc">
+              Master the fundamentals of constitutional principles and case
+              laws.
+            </p>
+          </div>
+          <div class="locked-overlay">🔓</div>
+
+          <a href="#">
+            <button class="cta">Read Now</button>
+          </a>
+        </div>
+
+        <div class="course-card">
+          <div class="course-img">📖</div>
+          <div class="course-content">
+            <h3 class="course-title">Contract Law</h3>
+            <p class="course-desc">
+              In-depth notes on contracts, agreements, and legal obligations.
+            </p>
+          </div>
+          <div class="locked-overlay">🔓</div>
+
+          <a href="#">
+            <button class="cta">Read Now</button>
+          </a>
+        </div>
+      </div>
+    </section>
+
+    <!-- Theme Persistence Script -->
+    <script>
+      // Apply saved theme on page load
+      document.addEventListener("DOMContentLoaded", () => {
+        const savedTheme = localStorage.getItem("theme") || "light";
+        document.body.className = savedTheme; // Apply class to body
+      });
+
+      // Function to set theme
+      function setTheme(theme) {
+        document.body.className = theme;
+        localStorage.setItem("theme", theme);
+      }
+    </script>
+  </body>
+</html>

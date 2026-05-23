@@ -1,0 +1,237 @@
+
+/* ========== Base Reset ========== */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Poppins", sans-serif;
+}
+
+/* ========== Base Styles ========== */
+body {
+  transition: background 0.4s ease, color 0.4s ease;
+  min-height: 100vh;
+  padding: 20px;
+}
+
+/* ========== Navbar ========== */
+nav {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 12px 25px;
+  border-radius: 12px;
+  box-shadow: 0 2px 6px rgba(0, 0, 0, 0.1);
+  position: sticky;
+  top: 0;
+  z-index: 10;
+  transition: background 0.4s ease, color 0.4s ease;
+}
+
+/* Left Section */
+.nav-left {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
+.logo {
+  width: 45px;
+  height: 45px;
+  border-radius: 50%;
+  object-fit: cover;
+}
+
+.brand-name {
+  font-weight: 600;
+  font-size: 1.3rem;
+}
+
+/* Right Section (Theme Switcher) */
+.theme-switcher button {
+  border: none;
+  background: none;
+  font-size: 1.3rem;
+  cursor: pointer;
+  margin: 0 5px;
+  color: inherit;
+  transition: transform 0.2s ease;
+}
+
+.theme-switcher button:hover {
+  transform: scale(1.2);
+}
+
+/* ========== Content ========== */
+h1, p {
+  text-align: center;
+  margin: 15px 0;
+}
+
+/* ========== Form Section ========== */
+form {
+  display: flex;
+  flex-direction: column;
+  max-width: 400px;
+  margin: 40px auto;
+  padding: 25px;
+  border-radius: 12px;
+  transition: background 0.4s ease, color 0.4s ease, border-color 0.4s ease;
+  box-shadow: 0 2px 8px rgba(0,0,0,0.1);
+}
+
+form h1 {
+  font-size: 1.2rem;
+  margin-bottom: 20px;
+}
+
+form input {
+  margin-bottom: 15px;
+  padding: 10px;
+  border-radius: 6px;
+  font-size: 1rem;
+  border: 1px solid;
+  transition: background 0.3s ease, border-color 0.3s ease, color 0.3s ease;
+}
+
+form input:focus {
+  outline: none;
+  border-color: var(--accent);
+}
+
+/* Submit Button */
+a button {
+  display: block;
+  width: 200px;
+  margin: 10px auto;
+  padding: 10px 0;
+  font-size: 1rem;
+  border: none;
+  border-radius: 6px;
+  cursor: pointer;
+  transition: background 0.3s ease;
+}
+
+/* ========== LIGHT THEME ========== */
+body.light {
+  --bg: #f9f9f9;
+  --text: #222;
+  --card-bg: #fff;
+  --border: #ccc;
+  --accent: #0078ff;
+  --button-bg: #0078ff;
+  --button-text: #fff;
+}
+
+body.light {
+  background: var(--bg);
+  color: var(--text);
+}
+
+body.light nav,
+body.light form {
+  background: var(--card-bg);
+  color: var(--text);
+  border: 1px solid var(--border);
+}
+
+body.light form input {
+  background: #fff;
+  color: #222;
+  border-color: var(--border);
+}
+
+body.light a button {
+  background: var(--button-bg);
+  color: var(--button-text);
+}
+body.light a button:hover {
+  background: #005bcc;
+}
+
+/* ========== DARK THEME ========== */
+body.dark {
+  --bg: #1a1a1a;
+  --text: #f1f1f1;
+  --card-bg: #222;
+  --border: #444;
+  --accent: #4da3ff;
+  --button-bg: #4da3ff;
+  --button-text: #000;
+}
+
+body.dark {
+  background: var(--bg);
+  color: var(--text);
+}
+
+body.dark nav,
+body.dark form {
+  background: var(--card-bg);
+  color: var(--text);
+  border: 1px solid var(--border);
+}
+
+body.dark form input {
+  background: #2b2b2b;
+  color: #fff;
+  border-color: var(--border);
+}
+
+body.dark a button {
+  background: var(--button-bg);
+  color: var(--button-text);
+}
+body.dark a button:hover {
+  background: #007bff;
+}
+
+/* ========== SEPIA THEME ========== */
+body.sepia {
+  --bg: #f4ecd8;
+  --text: #4b3b2a;
+  --card-bg: #e9dcc1;
+  --border: #c3b494;
+  --accent: #a67b41;
+  --button-bg: #a67b41;
+  --button-text: #fff;
+}
+
+body.sepia {
+  background: var(--bg);
+  color: var(--text);
+}
+
+body.sepia nav,
+body.sepia form {
+  background: var(--card-bg);
+  color: var(--text);
+  border: 1px solid var(--border);
+}
+
+body.sepia form input {
+  background: #f9f3e4;
+  color: #4b3b2a;
+  border-color: var(--border);
+}
+
+body.sepia a button {
+  background: var(--button-bg);
+  color: var(--button-text);
+}
+body.sepia a button:hover {
+  background: #8a6330;
+}
+
+/* ========== Responsive Design ========== */
+@media (max-width: 600px) {
+  nav {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 10px;
+  }
+
+  form {
+    width: 90%;
+  }
+}

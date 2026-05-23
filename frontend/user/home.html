@@ -1,0 +1,374 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Parajulillb's Official Online Course Site</title>
+    <link rel="stylesheet" href="../assets/css/styles.css">
+    
+  </head>
+  <body>
+    
+    <nav>
+      <!-- Left Section: Logo + Parajulillb -->
+      <div class="nav-left">
+        <img src="../assets/images/logo.jpg" alt="" class="logo" />
+        <span class="brand-name">Parajulillb</span>
+      </div>
+
+      <!-- Center Section: Navigation Buttons -->
+      <div class="nav-center">
+        <button onclick="scrollToSection('home')">Home</button>
+        <button onclick="scrollToSection('about')">About</button>
+        <button onclick="scrollToSection('contact')">Contact</button>
+        <button onclick="scrollToSection('courses')">Courses</button>
+        <button onclick="scrollToSection('pricing')">Pricing</button>
+        <button onclick="scrollToSection('faqs')">FAQs</button>
+      </div>
+
+      <!-- Right Section: Theme Switcher + Get Started -->
+      <div class="nav-right">
+        <div class="theme-switcher">
+            
+            <button onclick="setTheme('light')">☀️ </button>
+            <button onclick="setTheme('dark')">🌙 </button>
+            <button onclick="setTheme('sepia')">📜 </button>
+        
+        </div>
+            
+            <a href="">
+            <button class="cta">Get Started</button>
+            </a>
+      
+        </div>
+    </nav>
+    
+
+    <!-- Hero Section -->
+    <section class="hero">
+        <h1>Learn Smarter, Anytime, Anywhere</h1>
+        <p>Exclusive notes, materials, and courses designed for you.</p>
+        <div class="hero-cta">
+            <a href="subscribe.html" class="btn btn-primary">🚀 Get Started</a>
+            <a href="#courses" class="btn btn-secondary">📜 See Demo</a>
+        </div>
+    </section>
+    <hr>
+    
+       <!-- Courses Section -->
+    <section class="section" id="courses">
+        <h2 class="section-title">What We Offer</h2>
+        <div class="courses-grid">
+            <div class="course-card">
+                <div class="course-img">📚</div>
+                <div class="course-content">
+                    <h3 class="course-title">English </h3>
+                    <p class="course-desc">Master the fundamentals of English language and literature.</p>
+                    <div class="course-price">NRS 100</div>
+                </div>
+                <div class="locked-overlay">🔒</div>
+            </div>
+            <div class="course-card">
+                <div class="course-img">⚖️</div>
+                <div class="course-content">
+                    <h3 class="course-title">Nepali</h3>
+                    <p class="course-desc">Learn the Nepali language and its rich cultural context.</p>
+                    <div class="course-price">NRS 100</div>
+                </div>
+                <div class="locked-overlay">🔒</div>
+            </div>
+            <div class="course-card">
+                <div class="course-img">📖</div>
+                <div class="course-content">
+                    <h3 class="course-title">Science</h3>
+                    <p class="course-desc">In-depth notes on scientific concepts and principles.</p>
+                    <div class="course-price">NRS 100</div>
+                </div>
+                <div class="locked-overlay">🔒</div>
+            </div>
+            <div class="course-card">
+                <div>
+                    <a href="courses.html" class="btn btn-primary">See All Courses →</a>
+                </div>
+            </div>
+        </div>
+    </section>
+    <hr>
+    
+
+    <div class="pricing-container">
+    <!-- Comparison Section -->
+<div class="comparison-section">
+    <h3 class="comparison-title">Subscription-Based Platforms</h3>
+    <div class="current-cost">₹1200+</div>
+    <p class="cost-label">What you pay annually</p>
+
+    <div class="comparison-items">
+        <div class="comparison-item">
+            <div class="item-name">
+                <span class="item-icon">📅</span>
+                <span>Monthly Subscription</span>
+            </div>
+            <span class="item-price">₹100/mo</span>
+        </div>
+
+        <div class="comparison-item">
+            <div class="item-name">
+                <span class="item-icon">📆</span>
+                <span>Quarterly Plan (3 months)</span>
+            </div>
+            <span class="item-price">₹300</span>
+        </div>
+
+        <div class="comparison-item">
+            <div class="item-name">
+                <span class="item-icon">📊</span>
+                <span>Half-Yearly Plan</span>
+            </div>
+            <span class="item-price">₹600</span>
+        </div>
+
+        <div class="comparison-item">
+            <div class="item-name">
+                <span class="item-icon">🗓️</span>
+                <span>Annual Subscription</span>
+            </div>
+            <span class="item-price">₹1200</span>
+        </div>
+
+        <div class="comparison-item">
+            <div class="item-name">
+                <span class="item-icon">🔄</span>
+                <span>Auto-renewal fees</span>
+            </div>
+            <span class="item-price">+₹50</span>
+        </div>
+    </div>
+
+    <div class="disadvantages">
+        <div class="disadvantage-item">
+            <span class="cross-icon">✕</span>
+            <span class="disadvantage-text">Recurring payments - drains budget</span>
+        </div>
+        <div class="disadvantage-item">
+            <span class="cross-icon">✕</span>
+            <span class="disadvantage-text">Lose access after cancellation</span>
+        </div>
+        <div class="disadvantage-item">
+            <span class="cross-icon">✕</span>
+            <span class="disadvantage-text">Hidden renewal charges</span>
+        </div>
+    </div>
+
+    <div class="vs-badge">VS</div>
+</div>
+        <!-- Pricing Card -->
+        <div class="pricing-card">
+            <div class="card-header">
+                <div class="course-icon">🎓</div>
+                <h2 class="card-title">All Access Pass</h2>
+            </div>
+
+            <div class="price-section">
+                <label class="price-option selected">
+                    <input type="radio" name="pricing" checked>
+                    <div class="price-amount">₹100</div>
+                    <div class="price-period">Per Course</div>
+                </label>
+            </div>
+
+            <div class="badge-ultimate">
+                <span>🎁</span>
+                <span>ULTIMATE LEARNING PACKAGE</span>
+            </div>
+
+            <div class="features-list">
+                <div class="feature-item">
+                    <span class="checkmark">✓</span>
+                    <div class="feature-text">
+                        Access to all premium courses
+                        <div class="model-icons">
+                            <span class="model-icon">📚</span>
+                            <span class="model-icon">🎨</span>
+                            <span class="model-icon">💻</span>
+                            <span class="model-icon">📱</span>
+                            <span class="model-icon">🤖</span>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="feature-item">
+                    <span class="checkmark">✓</span>
+                    <span class="feature-text">Lifetime updates & new content</span>
+                </div>
+
+                <div class="feature-item">
+                    <span class="checkmark">✓</span>
+                    <span class="feature-text">Downloadable resources & PDFs</span>
+                </div>
+
+                <div class="feature-item">
+                    <span class="checkmark">✓</span>
+                    <span class="feature-text">Certificate of completion</span>
+                </div>
+
+                <div class="feature-item">
+                    <span class="checkmark">✓</span>
+                    <span class="feature-text">24/7 community support</span>
+                </div>
+            </div>
+            
+            <a href="http://localhost:3000/pay" class="cta-button">
+                Get Started Now
+                <span>→</span>
+            </a>
+
+            <div class="payment-info">
+                <span>🔒</span>
+                <span>Secure payments via eSewa</span>
+            </div>
+        </div>
+    </div>
+    <hr>
+
+    <!-- FAQ Section -->
+    <section class="section">
+        <h2 class="section-title">Frequently Asked Questions</h2>
+        <div class="faq-container">
+            <div class="faq-item">
+                <div class="faq-question" onclick="toggleFAQ(this)">
+                    <span>How do I access my courses after purchase?</span>
+                    <span class="faq-icon">▼</span>
+                </div>
+                <div class="faq-answer">
+                    After successful payment, you'll receive instant access to your courses through your dashboard. Simply log in and navigate to "My Courses" to start learning.
+                </div>
+            </div>
+
+            <div class="faq-item">
+                <div class="faq-question" onclick="toggleFAQ(this)">
+                    <span>Can I download the materials for offline use?</span>
+                    <span class="faq-icon">▼</span>
+                </div>
+                <div class="faq-answer">
+                    Yes! Subscribers can download encrypted materials that work only within our secure app, similar to YouTube's offline feature.
+                </div>
+            </div>
+
+            <div class="faq-item">
+                <div class="faq-question" onclick="toggleFAQ(this)">
+                    <span>What payment methods do you accept?</span>
+                    <span class="faq-icon">▼</span>
+                </div>
+                <div class="faq-answer">
+                    We accept payments through eSewa, the most trusted digital wallet in Nepal. The payment process is secure and instant.
+                </div>
+            </div>
+
+            <div class="faq-item">
+                <div class="faq-question" onclick="toggleFAQ(this)">
+                    <span>Is there a refund policy?</span>
+                    <span class="faq-icon">▼</span>
+                </div>
+                <div class="faq-answer">
+                    We offer a 7-day money-back guarantee if you're not satisfied with the course quality. Contact our support team for refund requests.
+                </div>
+            </div>
+
+            <div class="faq-item">
+                <div class="faq-question" onclick="toggleFAQ(this)">
+                    <span>How long do I have access to the courses?</span>
+                    <span class="faq-icon">▼</span>
+                </div>
+                <div class="faq-answer">
+                    Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Once you purchase a course, you have lifetime access to all materials and future updates.
+                </div>
+            </div>
+
+            <div class="faq-item">
+                <div class="faq-question" onclick="toggleFAQ(this)">
+                    <span>Are the courses suitable for beginners?</span>
+                    <span class="faq-icon">▼</span>
+                </div>
+                <div class="faq-answer">
+                    Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Our courses are designed for all skill levels, from complete beginners to advanced learners.
+                </div>
+            </div>
+
+            <div class="faq-item">
+                <div class="faq-question" onclick="toggleFAQ(this)">
+                    <span>Do you provide certificates upon completion?</span>
+                    <span class="faq-icon">▼</span>
+                </div>
+                <div class="faq-answer">
+                    Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Yes, you will receive a verified certificate of completion for each course you finish, which you can share on LinkedIn and other platforms.
+                </div>
+            </div>
+
+            <div class="faq-item">
+                <div class="faq-question" onclick="toggleFAQ(this)">
+                    <span>What if I have technical issues accessing the content?</span>
+                    <span class="faq-icon">▼</span>
+                </div>
+                <div class="faq-answer">
+                    Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum. Our support team is available 24/7 to help you with any technical issues. You can reach us via email, chat, or phone support.
+                </div>
+            </div>
+        </div>
+        <hr>
+    
+    <!-- Motto + CTA -->
+    <section class="hero">
+        <h2>Success Starts with Learning</h2>
+        <p>Join thousands of students achieving their goals with our comprehensive courses.</p>
+        <a href="subscribe.html" class="btn btn-primary">Start Learning Today</a>
+    </section>
+    <hr>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="footer-container">
+            <div>
+                <h4>Quick Links</h4>
+                <ul class="footer-links">
+                    <li><a href="index.html">Home</a></li>
+                    <li><a href="about.html">About</a></li>
+                    <li><a href="contact.html">Contact</a></li>
+                    <li><a href="#courses">Courses</a></li>
+                </ul>
+            </div>
+            <div>
+                <h4>Legal</h4>
+                <ul class="footer-links">
+                    <li><a href="terms.html">Terms & Conditions</a></li>
+                    <li><a href="privacy.html">Privacy Policy</a></li>
+                    <li><a href="refund.html">Refund Policy</a></li>
+                </ul>
+            </div>
+            <div>
+                <h4>Support</h4>
+                <ul class="footer-links">
+                    <li><a href="contact.html">Contact Us</a></li>
+                    <li><a href="faq.html">FAQ</a></li>
+                    <li><a href="support.html">Help Center</a></li>
+                </ul>
+            </div>
+            <div>
+                <h4>Connect</h4>
+                <div class="social-icons">
+                    <a href="#" class="social-icon">f</a>
+                    <a href="#" class="social-icon">t</a>
+                    <a href="#" class="social-icon">i</a>
+                    <a href="#" class="social-icon">y</a>
+                </div>
+            </div>
+        </div>
+        <div class="copyright">
+            © 2025 ParajLiLLB. All rights reserved.
+        </div>
+    </footer>
+
+    <script src="../assets/js/script.js" defer></script>
+  </body>
+</html>
+

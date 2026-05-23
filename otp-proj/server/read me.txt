@@ -1,0 +1,9 @@
+UttamDonApp
+gmail : uttamdon450@gmail.com
+app password : eecg mzjb ojds rwnx
+
+powershell commands:
+
+$env:GMAIL_USER="uttamdon450@gmail.com"
+$env:GMAIL_APP_PASSWORD="eecg mzjb ojds rwnx"
+node server.js 

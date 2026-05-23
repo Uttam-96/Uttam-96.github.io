@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>OTP Email Verification</title>
+	<link rel="stylesheet" href="http://localhost:3000/frontend/assets/css/styles.css">
+	<link rel="stylesheet" href="style.css">
+</head>
+<body>
+	<nav>
+	  <div class="nav-left">
+	    <img src="http://localhost:3000/frontend/assets/images/logo.jpg" alt="" class="logo" />
+	    <span class="brand-name">Parajulillb</span>
+	  </div>
+
+	  <div class="nav-center">
+		<a href="http://localhost:3000/frontend/user/home.html">
+	    <button>Home</button>
+		</a>
+	  </div>
+
+	  <div class="nav-right">
+	    <div class="theme-switcher">
+	      <button onclick="setTheme('light')" aria-label="Light Theme">☀️ </button>
+	      <button onclick="setTheme('dark')" aria-label="Dark Theme">🌙</button>
+	      <button onclick="setTheme('sepia')" aria-label="Sepia Theme">📜</button>
+	    </div>
+	  </div>
+	</nav>
+
+	<main class="otp-page">
+	  <section class="verify-card">
+	    <div class="badge">OTP Verify</div>
+	    <h1>Email Verification</h1>
+	    <p class="subtitle">Enter your full name and Gmail address, then verify the 6-digit code sent to your inbox.</p>
+
+	    <div class="form-group">
+	      <label for="fullName">Full Name</label>
+	      <input type="text" id="fullName" placeholder="John Doe" autocomplete="name">
+	    </div>
+
+	    <div class="form-group">
+	      <label for="email">Gmail Address</label>
+	      <input type="email" id="email" placeholder="you@gmail.com" autocomplete="email">
+	    </div>
+
+	    <button id="sendOtpBtn" class="primary-btn">Send OTP</button>
+
+	    <div id="otpSection" class="otp-section hidden">
+	      <div class="form-group">
+	        <label for="otp">Enter OTP</label>
+	        <input type="text" id="otp" maxlength="6" placeholder="123456" inputmode="numeric">
+	      </div>
+
+	      <button id="verifyOtpBtn" class="secondary-btn">Verify OTP</button>
+	    </div>
+
+	    <p id="message" class="message" aria-live="polite"></p>
+	  </section>
+	</main>
+
+	<footer class="footer">
+	  <div class="copyright">© 2025 ParajLiLLB. All rights reserved.</div>
+	</footer>
+	<script src="script.js"></script>
+</body>
+</html>

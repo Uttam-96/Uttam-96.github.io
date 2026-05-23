@@ -1,0 +1,256 @@
+/* Reset and Base Styles */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  transition: background-color 0.3s ease, color 0.3s ease;
+}
+
+/* Theme Variables */
+body.light {
+  --bg-color: #ffffff;
+  --nav-bg: #f8f9fa;
+  --text-color: #333333;
+  --button-bg: #007bff;
+  --button-hover: #0056b3;
+  --border-color: #e0e0e0;
+}
+
+body.dark {
+  --bg-color: #1a1a1a;
+  --nav-bg: #2d2d2d;
+  --text-color: #ffffff;
+  --button-bg: #0d6efd;
+  --button-hover: #0a58ca;
+  --border-color: #404040;
+}
+
+body.sepia {
+  --bg-color: #f4ecd8;
+  --nav-bg: #e8dcc0;
+  --text-color: #5c4a2f;
+  --button-bg: #8b7355;
+  --button-hover: #6d5a43;
+  --border-color: #d4c4a8;
+}
+
+body {
+  background-color: var(--bg-color);
+  color: var(--text-color);
+}
+
+/* Navigation Styles */
+nav {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 1rem 2rem;
+  background-color: var(--nav-bg);
+  border-bottom: 2px solid var(--border-color);
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+
+}
+
+/* Left Section */
+.nav-left {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+}
+
+.logo {
+  width: 50px;
+  height: 50px;
+  border-radius: 50%;
+  object-fit: cover;
+  border: 2px solid var(--border-color);
+}
+
+.brand-name {
+  font-size: 1.5rem;
+  font-weight: bold;
+  color: var(--text-color);
+  letter-spacing: 0.5px;
+}
+
+/* Center Section */
+.nav-center {
+  display: flex;
+  gap: 1rem;
+}
+
+.nav-center a {
+  text-decoration: none;
+}
+
+.nav-center button {
+  padding: 0.75rem 1.5rem;
+  background-color: var(--button-bg);
+  color: white;
+  border: none;
+  border-radius: 6px;
+  font-size: 1rem;
+  font-weight: 500;
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
+
+.nav-center button:hover {
+  background-color: var(--button-hover);
+  transform: translateY(-2px);
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+}
+
+.nav-center button:active {
+  transform: translateY(0);
+}
+
+/* Right Section - Theme Switcher */
+.nav-right {
+  display: flex;
+  align-items: center;
+}
+
+.theme-switcher {
+  display: flex;
+  gap: 0.5rem;
+  padding: 0.5rem;
+  background-color: rgba(0, 0, 0, 0.05);
+  border-radius: 20px;
+}
+
+.theme-switcher button {
+  width: 35px;
+  height: 35px;
+  border-radius: 50%;
+  border: 2px solid var(--border-color);
+  background-color: var(--bg-color);
+  color: var(--text-color);
+  font-size: 1.2rem;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.theme-switcher button:hover {
+  transform: scale(1.1);
+  box-shadow: 0 2px 6px rgba(0, 0, 0, 0.2);
+}
+
+.theme-switcher button:active {
+  transform: scale(0.95);
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+  nav {
+    flex-direction: column;
+    gap: 1rem;
+    padding: 1rem;
+  }
+
+  .nav-left,
+  .nav-center,
+  .nav-right {
+    width: 100%;
+    justify-content: center;
+  }
+
+  .nav-center {
+    flex-wrap: wrap;
+  }
+
+  .brand-name {
+    font-size: 1.2rem;
+  }
+
+  .logo {
+    width: 40px;
+    height: 40px;
+  }
+}
+
+@media (max-width: 480px) {
+  .nav-center button {
+    padding: 0.6rem 1rem;
+    font-size: 0.9rem;
+  }
+
+  .theme-switcher button {
+    width: 30px;
+    height: 30px;
+  }
+}
+
+/* Full-page background image */
+.background img {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    filter: blur(4px);
+    z-index: -1;
+}
+
+/* Centered sign-in container */
+.payment-container {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    background: rgba(234, 195, 195, 0.9);
+    padding: 40px 30px;
+    border-radius: 12px;
+    text-align: center;
+    box-shadow: 0 10px 25px rgba(0,0,0,0.2);
+    width: 90%;
+    max-width: 400px;
+}
+
+/* Heading and description */
+.payment-container h2 {
+    margin-bottom: 15px;
+    font-size: 28px;
+    color: #333;
+}
+
+.payment-container p {
+    margin-bottom: 25px;
+    font-size: 16px;
+    color: #555;
+}
+
+/* Google button */
+.esewa-btn {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 100%;
+    padding: 12px;
+    border: none;
+    border-radius: 5px;
+    background: #fff;
+    box-shadow: 0 3px 6px rgba(0,0,0,0.1);
+    cursor: pointer;
+    transition: transform 0.2s, box-shadow 0.2s;
+    font-size: 16px;
+}
+
+.esewa-btn img {
+    width: 20px;
+    height: 20px;
+    margin-right: 12px;
+}
+
+.esewa-btn:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 6px 12px rgba(0,0,0,0.15);
+}

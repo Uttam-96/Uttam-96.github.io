@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="../assets/css/dashboard.css">
+    <link rel="stylesheet" href="../assets/css/styles.css">
+</head>
+<body>
+          <!-- Navigation -->
+  <nav>
+    <div class="nav-left">
+      <img src="../assets/images/logo.jpg" alt="Parajulillb Logo" class="logo" />
+      <span class="brand-name">Parajulillb</span>
+    </div>
+
+    <div class="nav-right">
+      <div class="theme-switcher">
+        <button onclick="setTheme('light')" aria-label="Light Theme">☀️ </button>
+        <button onclick="setTheme('dark')" aria-label="Dark Theme">🌙</button>
+        <button onclick="setTheme('sepia')" aria-label="Sepia Theme">🌙</button>
+  </nav>
+        <!-- Centered sign-in section -->
+    <div class="payment-container">
+
+      <p>Pay with esewa to continue</p>
+      <button class="esewa-btn" id="googleSignIn">
+        <img src="../assets/images\esewa-logo.png" alt="Esewa Logo " />
+        <pre> </pre>
+        <span>Pay with Esewa</span>
+      </button>
+    </div>
+
+    <!-- Theme Persistence Script -->
+  <script>
+    // Apply saved theme on page load
+    document.addEventListener("DOMContentLoaded", () => {
+      const savedTheme = localStorage.getItem("theme") || "light";
+      document.body.className = savedTheme; // Apply class to body
+    });
+
+    // Function to set theme
+    function setTheme(theme) {
+      document.body.className = theme;
+      localStorage.setItem("theme", theme);
+    }
+
+      // Redirect to profile.html on button click
+      document.getElementById('googleSignIn').addEventListener('click', function() {
+        // For now, simulate Google sign-in
+          window.location.href = 'transition.html';
+      });
+  </script>
+</body>
+</html>
+

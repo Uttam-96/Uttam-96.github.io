@@ -1,0 +1,142 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="../assets/css/styles.css">
+    <link rel="stylesheet" href="../assets/css/courses.css">
+</head>
+<body>
+
+  <!-- Navigation -->
+  <nav>
+    <div class="nav-left">
+      <img src="../assets/images/logo.jpg" alt="Parajulillb Logo" class="logo" />
+      <span class="brand-name">Parajulillb</span>
+    </div>
+
+    <div class="nav-center">
+      <a href="home.html"><button>Home</button></a>
+      <a href="courses.html"><button>Courses</button></a>
+    </div>
+
+    <div class="nav-right">
+      <div class="theme-switcher">
+        <button onclick="setTheme('light')" aria-label="Light Theme">☀️ </button>
+        <button onclick="setTheme('dark')" aria-label="Dark Theme">🌙</button>
+        <button onclick="setTheme('sepia')" aria-label="Sepia Theme">🌙</button>
+  </nav>
+  <hr>
+  <!----
+  <section class="section" id="courses">
+  <h2 class="section-title">What We Offer</h2>
+  <div class="courses-grid">
+     Constitutional Law
+    <div class="course-card" data-price="100" data-title="Constitutional Law">
+      <div class="checkbox-container">
+        <input type="checkbox" id="constitutional-law" class="course-checkbox">
+        <label for="constitutional-law">Select Constitutional Law</label>
+      </div>
+      <div class="course-img">📚</div>
+      <div class="course-content">
+        <h3 class="course-title">Constitutional Law</h3>
+        <p class="course-desc">Master the fundamentals of constitutional principles and case laws.</p>
+        <div class="course-price">NRS 100</div>
+      </div>
+      <div class="button-group">
+        <button class="btn btn-buy">Buy Now</button>
+        <button class="btn btn-cart">Add to Cart</button>
+      </div>
+    </div>
+
+  
+    <div class="course-card" data-price="100" data-title="Criminal Law">
+      <div class="checkbox-container">
+        <input type="checkbox" id="criminal-law" class="course-checkbox">
+        <label for="criminal-law">Select Criminal Law</label>
+      </div>
+      <div class="course-img">⚖️</div>
+      <div class="course-content">
+        <h3 class="course-title">Criminal Law</h3>
+        <p class="course-desc">Comprehensive study materials for criminal procedures and justice.</p>
+        <div class="course-price">NRS 100</div>
+      </div>
+      <div class="button-group">
+        <button class="btn btn-buy">Buy Now</button>
+        <button class="btn btn-cart">Add to Cart</button>
+      </div>
+    </div>
+
+  
+    <div class="course-card" data-price="100" data-title="Contract Law">
+      <div class="checkbox-container">
+        <input type="checkbox" id="contract-law" class="course-checkbox">
+        <label for="contract-law">Select Contract Law</label>
+      </div>
+      <div class="course-img">📖</div>
+      <div class="course-content">
+        <h3 class="course-title">Contract Law</h3>
+        <p class="course-desc">In-depth notes on contracts, agreements, and legal obligations.</p>
+        <div class="course-price">NRS 100</div>
+      </div>
+      <div class="button-group">
+        <button class="btn btn-buy">Buy Now</button>
+        <button class="btn btn-cart">Add to Cart</button>
+      </div>
+    </div>
+
+    <div class="course-card" data-price="100" data-title="Political Law">
+      <div class="checkbox-container">
+        <input type="checkbox" id="political-law" class="course-checkbox">
+        <label for="political-law">Select Political Law</label>
+      </div>
+      <div class="course-img">🏛️</div>
+      <div class="course-content">
+        <h3 class="course-title">Political Law</h3>
+        <p class="course-desc">In-depth politics and laws necessary to govern the nation.</p>
+        <div class="course-price">NRS 100</div>
+      </div>
+      <div class="button-group">
+        <button class="btn btn-buy">Buy Now</button>
+        <button class="btn btn-cart">Add to Cart</button>
+      </div>
+    </div>
+  </div>
+  <hr>
+  <div class="cart-summary">
+    <h3>Cart Summary</h3>
+    <div class="summary-row">
+      <span>Selected Items:</span>
+      <span id="item-count">0</span>
+    </div>
+    <div class="summary-row summary-total">
+      <span>Total:</span>
+      <span id="total-price">NRS 0</span>
+       </div> <br><br><hr>
+      <a href="dashboard.html" class="cta-button">
+           Proceed To Checkout
+      <span>→</span>
+      </a>
+          
+</section>
+  -->
+  <!-- Theme Persistence Script -->
+  <script>
+    // Apply saved theme on page load
+    document.addEventListener("DOMContentLoaded", () => {
+      const savedTheme = localStorage.getItem("theme") || "light";
+      document.body.className = savedTheme; // Apply class to body
+    });
+
+    // Function to set theme
+    function setTheme(theme) {
+      document.body.className = theme;
+      localStorage.setItem("theme", theme);
+    }
+  </script>
+
+</body>
+</html>
+
+

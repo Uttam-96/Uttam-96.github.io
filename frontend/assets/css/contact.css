@@ -1,0 +1,164 @@
+/* =============================
+   CONTACT PAGE STYLES
+   ============================= */
+
+/* Navigation Bar */
+nav {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background: var(--nav-bg);
+  padding: 0.8rem 2rem;
+  border-bottom: 1px solid var(--accent-color);
+}
+
+.nav-left {
+  display: flex;
+  align-items: center;
+}
+
+.logo {
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+  margin-right: 0.5rem;
+}
+
+.brand-name {
+  font-size: 1.3rem;
+  font-weight: 600;
+  color: var(--text-color);
+}
+
+.nav-center button {
+  background: none;
+  border: none;
+  margin: 0 0.8rem;
+  font-size: 1rem;
+  cursor: pointer;
+  color: var(--text-color);
+  transition: color 0.3s;
+}
+
+.nav-center button:hover {
+  color: var(--accent-color);
+}
+
+.nav-right {
+  display: flex;
+  align-items: center;
+}
+
+.theme-switcher button {
+  background: none;
+  border: none;
+  margin: 0 0.3rem;
+  font-size: 1.2rem;
+  cursor: pointer;
+  color: var(--text-color);
+  transition: transform 0.2s;
+}
+
+.theme-switcher button:hover {
+  transform: scale(1.2);
+  color: var(--accent-color);
+}
+
+/* =============================
+   FORM SECTION
+   ============================= */
+
+.form-section {
+  max-width: 600px;
+  margin: 3rem auto;
+  padding: 2rem;
+  background: var(--nav-bg);
+  border-radius: 10px;
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+}
+
+.form-section h2 {
+  text-align: center;
+  margin-bottom: 1.5rem;
+  color: var(--heading-color);
+}
+
+.success-message {
+  display: none;
+  background: #4caf50;
+  color: white;
+  padding: 0.8rem;
+  margin-bottom: 1rem;
+  border-radius: 5px;
+  text-align: center;
+  font-size: 0.95rem;
+}
+
+/* Form Layout */
+.form-group {
+  margin-bottom: 1.2rem;
+}
+
+label {
+  display: block;
+  margin-bottom: 0.4rem;
+  font-weight: 500;
+  color: var(--text-color);
+}
+
+input,
+textarea {
+  width: 100%;
+  padding: 0.8rem;
+  border: 1px solid var(--border-color, #ccc);
+  border-radius: 6px;
+  font-size: 1rem;
+  background: #f0f0f0; /* light gray for contrast */
+  color: #222;          /* dark text */
+}
+
+textarea {
+  min-height: 120px;
+  resize: vertical;
+}
+
+input:focus,
+textarea:focus {
+  outline: none;
+  border-color: var(--accent-color);
+  box-shadow: 0 0 4px var(--accent-color);
+}
+
+/* Submit Button */
+button[type="submit"] {
+  width: 100%;
+  padding: 0.9rem;
+  font-size: 1rem;
+  border: none;
+  border-radius: 6px;
+  background: var(--accent-color);
+  color: #fff;
+  font-weight: 600;
+  cursor: pointer;
+  transition: background 0.3s;
+}
+
+button[type="submit"]:hover {
+  background: var(--accent-hover);
+}
+
+/* =============================
+   RESPONSIVE
+   ============================= */
+@media (max-width: 600px) {
+  .form-section {
+    margin: 1.5rem;
+    padding: 1.5rem;
+  }
+
+  nav {
+    flex-direction: column;
+    gap: 0.8rem;
+    text-align: center;
+  }
+}

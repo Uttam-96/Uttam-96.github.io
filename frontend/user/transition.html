@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="../assets/css/styles.css">
+    <link rel="stylesheet" href="../assets/css/transition.css">
+</head>
+<body>
+
+    <nav>
+      <!-- Left Section: Logo + Parajulillb -->
+      <div class="nav-left">
+        <img src="../assets/images\logo.jpg" alt="" class="logo" />
+        <span class="brand-name">Parajulillb</span>
+      </div>
+
+      <!-- Center Section: Navigation Buttons -->
+      <div class="nav-center">
+        <!-- <button onclick="scrollToSection('home')">Home</button> -->
+
+      </div>
+
+      <!-- Right Section: Theme Switcher + Get Started -->
+      <div class="nav-right">
+        <div class="theme-switcher">
+          <button onclick="setTheme('light')" aria-label="Light Theme">
+            ☀️ 
+          </button>
+          <button onclick="setTheme('dark')" aria-label="Dark Theme">
+            🌙
+          </button>
+          <button onclick="setTheme('sepia')" aria-label="Sepia Theme">
+            📜
+          </button>
+        </div>
+      </div>
+    </nav>
+    <hr>
+
+    <div class = "" id = "" >
+    <h1>Thank you for your purchase,</h1>
+    <p>Check your email for your login id and password</p>
+    </div>
+    <hr>
+    <form>
+        <h1>Check your email and fill the form to log into your profile</h1>
+        <input type="email" label="email" placeholder="Enter your email">
+        <input type="password" label="password" placeholder="Enter your password">
+        <p>Remember this for your future login.</p>
+    </form>
+    <a href="profile.html">
+        <button type="submit">Submit</button>
+    </a>
+
+
+
+    
+  <!-- Theme Persistence Script -->
+  <script>
+    // Apply saved theme on page load
+    document.addEventListener("DOMContentLoaded", () => {
+      const savedTheme = localStorage.getItem("theme") || "light";
+      document.body.className = savedTheme; // Apply class to body
+    });
+
+    // Function to set theme
+    function setTheme(theme) {
+      document.body.className = theme;
+      localStorage.setItem("theme", theme);
+    }
+  </script>
+
+
+</body>
+</html>

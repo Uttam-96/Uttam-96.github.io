@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>About | Parajulillb</title>
+  <link rel="stylesheet" href="../assets/css/styles.css" />
+  <link rel="stylesheet" href="../assets/css/about.css" />
+</head>
+<body>
+  <!-- Navigation -->
+  <nav>
+    <div class="nav-left">
+      <img src="../assets/images/logo.jpg" alt="Parajulillb Logo" class="logo" />
+      <span class="brand-name">Parajulillb</span>
+    </div>
+
+    <div class="nav-center">
+      <a href="home.html"><button>Home</button></a>
+      <a href="about.html"><button>About</button></a>
+    </div>
+
+    <div class="nav-right">
+      <div class="theme-switcher">
+        <button onclick="setTheme('light')" aria-label="Light Theme">☀️ </button>
+        <button onclick="setTheme('dark')" aria-label="Dark Theme">🌙</button>
+        <button onclick="setTheme('sepia')" aria-label="Sepia Theme">📜</button>
+  </nav>
+
+  <!-- About Section -->
+  <section class="about-section">
+    <div class="about-container">
+      <h1>About Me</h1>
+      <p>
+        Hello, I’m <strong>Deepak Parajuli</strong> — a teacher, writer, and lawyer based in Pokhara. 
+        I currently teach at <strong>P.N. Campus</strong>, where I guide students in political science 
+        and related subjects. Alongside teaching, I continue to write and share ideas, blending 
+        classroom knowledge with practical insights.
+      </p>
+
+      <h2>About This Platform</h2>
+      <p>
+        This platform is built with one simple motto: <br />
+        <em>“Learn Smarter, Anytime, Anywhere.”</em>
+      </p>
+      <p>
+        Here, you’ll find exclusive notes, study materials, and subject-wise PDFs designed to 
+        support your learning journey beyond the classroom. Each subject is available for just 
+        <strong>NRS 100</strong> with lifetime access, including free updates.
+      </p>
+
+      <h2>Who Is This For?</h2>
+      <p>
+        This platform is primarily designed for <strong>college students</strong> who want to 
+        strengthen their understanding of political science and related subjects.
+      </p>
+
+      <h2>My Vision</h2>
+      <p>
+        My goal is to make education more accessible, affordable, and practical. 
+        By combining my experience as a teacher and a lawyer, I aim to bridge the gap 
+        between academic learning and real-world application—helping students not just 
+        pass exams, but also think critically and apply knowledge in their careers.
+      </p>
+    </div>
+  </section>
+
+  <!-- Theme Persistence Script -->
+  <script>
+    // Apply saved theme on page load
+    document.addEventListener("DOMContentLoaded", () => {
+      const savedTheme = localStorage.getItem("theme") || "light";
+      document.body.className = savedTheme; // Apply class to body
+    });
+
+    // Function to set theme
+    function setTheme(theme) {
+      document.body.className = theme;
+      localStorage.setItem("theme", theme);
+    }
+  </script>
+</body>
+</html>
