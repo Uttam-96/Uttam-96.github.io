@@ -1,9 +1,16 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta http-equiv="refresh" content="0; url=frontend/user/home.html">
     <title>Redirecting...</title>
-
-
+    <script>
+        // JS fallback for browsers that ignore meta refresh
+        (function(){
+            try { location.replace('frontend/user/home.html'); } catch(e) {}
+        })();
+    </script>
 </head>
 <body>
     <p>
